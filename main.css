@@ -1,0 +1,90 @@
+/* =============================================
+   ANTEIKU COFFEE — main.css (Home page)
+   ============================================= */
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 60px;
+  min-height: 80vh;
+  animation: fadeUp 0.9s ease 0.2s both;
+}
+
+.hero-text { flex: 1; }
+
+.hero-text h2 {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 900;
+  white-space: nowrap;
+  margin-bottom: 24px;
+  background: linear-gradient(90deg, #f5deb3 0%, #d4956a 40%, #f5deb3 60%, #d4956a 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #c49a6c;
+  margin-bottom: 32px;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #8b4513, #5c2d0a);
+  border-radius: 30px;
+  color: #f5deb3;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(139, 69, 19, 0.4);
+}
+
+.hero-cta:hover {
+  background: linear-gradient(135deg, #a0521a, #7a3a0d);
+  box-shadow: 0 6px 28px rgba(212, 149, 106, 0.4);
+  transform: translateY(-2px);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  width: 520px;
+  filter: drop-shadow(0 0 40px rgba(212, 149, 106, 0.4)) drop-shadow(0 30px 60px rgba(0,0,0,0.6));
+  animation: float 6s ease-in-out infinite;
+  transition: filter 0.3s ease;
+}
+
+.hero-image img:hover {
+  filter: drop-shadow(0 0 60px rgba(212, 149, 106, 0.7)) drop-shadow(0 30px 60px rgba(0,0,0,0.7));
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 50px 30px;
+    text-align: center;
+    gap: 40px;
+  }
+  .hero-text h2 {
+    white-space: normal;
+    font-size: clamp(3rem, 10vw, 5rem);
+  }
+  .hero-image img { width: 100%; max-width: 420px; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 30px 20px; }
+}

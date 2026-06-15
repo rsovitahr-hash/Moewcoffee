@@ -1,0 +1,163 @@
+/* =============================================
+   ANTEIKU COFFEE — menu.css (Menu page)
+   ============================================= */
+
+.menu-page { padding: 40px 40px 80px; }
+
+.menu-title {
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #f5deb3 0%, #d4956a 40%, #f5deb3 60%, #d4956a 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+.shop-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.shop-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex: 1;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+
+.menu-item {
+  width: calc(33.333% - 14px);
+  min-width: 180px;
+}
+
+.menu-card {
+  background: rgba(61, 31, 8, 0.5);
+  border: 1px solid rgba(212, 149, 106, 0.2);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(139, 69, 19, 0.5);
+  border-color: rgba(212, 149, 106, 0.4);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-card-body {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item-name { font-size: 0.95rem; font-weight: bold; color: #f5deb3; }
+.item-price { font-size: 0.85rem; color: #d4956a; }
+
+.add-to-cart-btn {
+  margin-top: 4px;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #8b4513, #5c2d0a);
+  border: none;
+  border-radius: 20px;
+  color: #f5deb3;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.05em;
+}
+
+.add-to-cart-btn:hover {
+  background: linear-gradient(135deg, #a0521a, #7a3a0d);
+  box-shadow: 0 4px 14px rgba(212, 149, 106, 0.35);
+  transform: scale(1.03);
+}
+
+.add-to-cart-btn:active { transform: scale(0.97); }
+
+/* Price panel */
+.menu-price-panel {
+  width: 300px;
+  flex-shrink: 0;
+  background: linear-gradient(160deg, #3d1f08, #2a1200, #1a0e07);
+  border: 1px solid rgba(212, 149, 106, 0.2);
+  border-radius: 14px;
+  padding: 32px 28px;
+  position: sticky;
+  top: 100px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  animation: fadeUp 0.8s ease 0.4s both;
+}
+
+.panel-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: #f5deb3;
+  text-align: center;
+}
+
+.panel-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #d4956a;
+  letter-spacing: 0.2em;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(212, 149, 106, 0.25);
+  margin-bottom: 16px;
+}
+
+.price-section { margin-bottom: 18px; }
+
+.price-section h3 {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #d4956a;
+  margin-bottom: 10px;
+}
+
+.price-section ul { list-style: none; }
+
+.price-section ul li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #c49a6c;
+  padding: 4px 0;
+  font-family: "Courier New", monospace;
+}
+
+.panel-enjoy {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f5deb3;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 1024px) {
+  .shop-container { flex-direction: column; align-items: center; }
+  .menu-price-panel { width: 100%; max-width: 500px; position: static; }
+  .menu-item { width: calc(50% - 10px); }
+}
+
+@media (max-width: 600px) {
+  .menu-page { padding: 30px 20px 60px; }
+  .menu-item { width: 100%; }
+  .shop-menu { gap: 16px; }
+}

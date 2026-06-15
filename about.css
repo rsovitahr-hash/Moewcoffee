@@ -1,0 +1,80 @@
+/* =============================================
+   ANTEIKU COFFEE — about.css (About page)
+   ============================================= */
+
+.about-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 60px 60px 40px;
+  min-height: 70vh;
+  align-items: start;
+  animation: fadeUp 0.9s ease 0.2s both;
+}
+
+.about-text h2 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 28px;
+  color: #d4956a;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #c49a6c;
+  margin-bottom: 16px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  filter: drop-shadow(0 0 30px rgba(139, 69, 19, 0.4));
+  animation: float 6s ease-in-out infinite;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+.photo-grid img.tall {
+  grid-row: span 2;
+  height: 100%;
+}
+
+.about-values { padding: 20px 60px 80px; }
+
+.about-values h2 {
+  font-size: 1.6rem;
+  color: #d4956a;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about-values ol {
+  padding-left: 24px;
+  line-height: 2.2;
+  color: #c49a6c;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .about-main { grid-template-columns: 1fr; padding: 40px 30px 30px; }
+  .photo-grid { grid-template-columns: 1fr 1fr; }
+  .about-values { padding: 20px 30px 60px; }
+}
+
+@media (max-width: 480px) {
+  .about-main { padding: 30px 20px 20px; }
+  .photo-grid { grid-template-columns: 1fr; }
+  .photo-grid img.tall { grid-row: auto; height: 200px; }
+  .about-values { padding: 20px 20px 50px; }
+}

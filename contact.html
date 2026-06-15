@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Moew COFFEE</title>
+  <link rel="stylesheet" href="css/shared.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo">
+      <img src="images/Moew.png" alt="Moew Coffee logo" />
+      <h1>Moew COFFEE</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li>
+          <button class="cart-btn" id="cart-open-btn" aria-label="Open cart">
+            🛒 Cart
+            <span class="cart-badge" id="cart-badge">0</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-section">
+    <h2 class="contact-heading">Contact Us</h2>
+
+    <div class="contact-grid">
+
+      <!-- Info column -->
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <div class="info-row">
+          <img src="images/icons8-email-50.png" alt="Email icon" />
+          <p>moewcoffeeshop@gmail.com</p>
+        </div>
+        <div class="info-row">
+          <img src="images/icons8-phone-48.png" alt="Phone icon" />
+          <p>+855 97 3033 591</p>
+        </div>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook" /></a>
+          <a href="#" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram" /></a>
+          <a href="#" aria-label="TikTok"><img src="images/tiktok.png" alt="TikTok" /></a>
+        </div>
+      </div>
+
+      <!-- Message form -->
+      <div class="contact-form-wrapper">
+        <h3>Send a Message</h3>
+        <div class="contact-form">
+          <input type="text"  id="name"          placeholder="Your Name"       required />
+          <input type="email" id="email"          placeholder="Email Address"   required />
+          <input type="tel"   id="contactnumber"  placeholder="Contact Number"  required />
+          <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+          <button type="button" id="send-message-btn">Send Message</button>
+        </div>
+      </div>
+
+    </div><!-- /.contact-grid -->
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 Moew COFFEE. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== CART SIDEBAR ===== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h2>🛒 Your Cart</h2>
+      <button class="cart-close" id="cart-close-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items-list" id="cart-items-list"></div>
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-price" id="cart-total-price">$0.00</span>
+      </div>
+      <button class="checkout-btn" id="cart-checkout-btn">Place Order</button>
+      <button class="clear-cart-btn" id="cart-clear-btn">Clear Cart</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="cart-toast"></div>
+
+  <script src="js/cart.js"></script>
+  <script>
+    // Contact form send button
+    document.getElementById("send-message-btn").addEventListener("click", () => {
+      const name  = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const msg   = document.getElementById("message").value.trim();
+
+      if (!name || !email || !msg) {
+        const toast = document.getElementById("cart-toast");
+        toast.textContent = "Please fill in all required fields.";
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 2500);
+        return;
+      }
+
+      const toast = document.getElementById("cart-toast");
+      toast.textContent = `Message sent! We'll get back to you soon ☕`;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 3000);
+
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("contactnumber").value = "";
+      document.getElementById("message").value = "";
+    });
+  </script>
+</body>
+</html>

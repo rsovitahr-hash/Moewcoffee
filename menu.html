@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Moew COFFEE</title>
+  <link rel="stylesheet" href="css/shared.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo">
+      <img src="images/Moew.png" alt="Moew Coffee logo" />
+      <h1>Moew COFFEE</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <button class="cart-btn" id="cart-open-btn" aria-label="Open cart">
+            🛒 Cart
+            <span class="cart-badge" id="cart-badge">0</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== MENU SECTION ===== -->
+  <section class="menu-page">
+    <h2 class="menu-title">Our Menu</h2>
+
+    <div class="shop-container">
+
+      <!-- ---- DRINK CARDS ---- -->
+      <div class="shop-menu">
+
+        <!-- Coffee items -->
+        <div class="menu-item">
+          <div class="menu-card">
+            <img src="images/expresso.jpg" alt="Espresso" />
+            <div class="menu-card-body">
+              <p class="item-name">Espresso</p>
+              <p class="item-price">$2.00</p>
+              <button class="add-to-cart-btn" data-add-to-cart data-name="Espresso" data-price="2.00">+ Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-card">
+            <img src="images/hot latte.jpg" alt="Hot Latte" />
+            <div class="menu-card-body">
+              <p class="item-name">Hot Latte</p>
+              <p class="item-price">$2.00</p>
+              <button class="add-to-cart-btn" data-add-to-cart data-name="Hot Latte" data-price="2.00">+ Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-card">
+            <img src="images/matcha latte.jpg" alt="Matcha Latte" />
+            <div class="menu-card-body">
+              <p class="item-name">Matcha Latte</p>
+              <p class="item-price">$2.00</p>
+              <button class="add-to-cart-btn" data-add-to-cart data-name="Matcha Latte" data-price="2.00">+ Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-card">
+            <img src="images/ice ame.jpg" alt="Ice Americano" />
+            <div class="menu-card-body">
+              <p class="item-name">Ice Americano</p>
+              <p class="item-price">$2.00</p>
+              <button class="add-to-cart-btn" data-add-to-cart data-name="Ice Americano" data-price="2.00">+ Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-card">
+            <img src="images/cappucino.jpg" alt="Cappuccino" />
+            <div class="menu-card-body">
+              <p class="item-name">Cappuccino</p>
+              <p class="item-price">$2.00</p>
+              <button class="add-to-cart-btn" data-add-to-cart data-name="Cappuccino" data-price="2.00">+ Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-card">
+            <img src="images/lattee macc.jpg" alt="Latte Macchiato" />
+            <div class="menu-card-body">
+              <p class="item-name">Latte Macchiato</p>
+              <p class="item-price">$2.00</p>
+              <button class="add-to-cart-btn" data-add-to-cart data-name="Latte Macchiato" data-price="2.00">+ Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-card">
+            <img src="images/lime soda.jpg" alt="Ice Lime Soda" />
+            <div class="menu-card-body">
+              <p class="item-name">Ice Lime Soda</p>
+              <p class="item-price">$2.00</p>
+              <button class="add-to-cart-btn" data-add-to-cart data-name="Ice Lime Soda" data-price="2.00">+ Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-card">
+            <img src="images/chocolate.jpg" alt="Hot Chocolate" />
+            <div class="menu-card-body">
+              <p class="item-name">Hot Chocolate</p>
+              <p class="item-price">$2.00</p>
+              <button class="add-to-cart-btn" data-add-to-cart data-name="Hot Chocolate" data-price="2.00">+ Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-card">
+            <img src="images/ice tea.jpg" alt="Ice Tea" />
+            <div class="menu-card-body">
+              <p class="item-name">Ice Tea</p>
+              <p class="item-price">$2.00</p>
+              <button class="add-to-cart-btn" data-add-to-cart data-name="Ice Tea" data-price="2.00">+ Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.shop-menu -->
+
+      <!-- ---- PRICE LIST PANEL ---- -->
+      <aside class="menu-price-panel">
+        <h1 class="panel-title">MENU</h1>
+        <p class="panel-subtitle">ドリンク</p>
+
+        <div class="price-section">
+          <h3>Coffee</h3>
+          <ul>
+            <li><span>Espresso</span><span>$2.00</span></li>
+            <li><span>Arabica</span><span>$2.00</span></li>
+            <li><span>Americano</span><span>$2.00</span></li>
+            <li><span>Latte</span><span>$2.00</span></li>
+            <li><span>Cappuccino</span><span>$2.00</span></li>
+            <li><span>Latte Macchiato</span><span>$2.00</span></li>
+          </ul>
+        </div>
+
+        <div class="price-section">
+          <h3>Non-Coffee</h3>
+          <ul>
+            <li><span>Matcha Latte</span><span>$2.00</span></li>
+            <li><span>Hot Chocolate</span><span>$2.00</span></li>
+            <li><span>Ice Tea</span><span>$2.00</span></li>
+            <li><span>Ice Lime Soda</span><span>$2.00</span></li>
+            <li><span>Strawberry Milk</span><span>$2.00</span></li>
+          </ul>
+        </div>
+
+        <div class="panel-enjoy">Enjoy! ☕</div>
+      </aside>
+
+    </div><!-- /.shop-container -->
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 Moew COFFEE. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== CART SIDEBAR ===== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h2>🛒 Your Cart</h2>
+      <button class="cart-close" id="cart-close-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items-list" id="cart-items-list"></div>
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-price" id="cart-total-price">$0.00</span>
+      </div>
+      <button class="checkout-btn" id="cart-checkout-btn">Place Order</button>
+      <button class="clear-cart-btn" id="cart-clear-btn">Clear Cart</button>
+    </div>
+  </aside>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="cart-toast"></div>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>

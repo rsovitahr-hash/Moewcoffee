@@ -1,0 +1,124 @@
+/* =============================================
+   ANTEIKU COFFEE — contact.css (Contact page)
+   ============================================= */
+
+.contact-section { padding: 50px 60px 80px; animation: fadeUp 0.9s ease 0.2s both; }
+
+.contact-heading {
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #f5deb3 0%, #d4956a 40%, #f5deb3 60%, #d4956a 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-info h3, .contact-form-wrapper h3 {
+  font-size: 1.3rem;
+  color: #d4956a;
+  margin-bottom: 24px;
+  letter-spacing: 0.06em;
+}
+
+.info-row { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.info-row img { width: 22px; height: 22px; filter: invert(1) opacity(0.6); }
+.info-row p { font-size: 0.95rem; color: #c49a6c; }
+
+.social-links { display: flex; gap: 16px; margin-top: 30px; }
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(139, 69, 19, 0.25);
+  border: 1px solid rgba(212, 149, 106, 0.2);
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  background: rgba(139, 69, 19, 0.5);
+  transform: scale(1.1);
+}
+
+.social-links img { width: 20px; height: 20px; filter: invert(1); }
+
+.contact-form { display: flex; flex-direction: column; gap: 14px; }
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(61, 31, 8, 0.5);
+  border: 1px solid rgba(212, 149, 106, 0.25);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #f5deb3;
+  font-size: 0.95rem;
+  font-family: Tahoma, sans-serif;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: rgba(196, 154, 108, 0.4); }
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(212, 149, 106, 0.6);
+  background: rgba(61, 31, 8, 0.7);
+}
+
+.contact-form textarea { resize: vertical; min-height: 120px; }
+
+.contact-form button {
+  padding: 13px;
+  background: linear-gradient(135deg, #8b4513, #5c2d0a);
+  border: none;
+  border-radius: 30px;
+  color: #f5deb3;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.06em;
+  box-shadow: 0 4px 20px rgba(139, 69, 19, 0.4);
+}
+
+.contact-form button:hover {
+  background: linear-gradient(135deg, #a0521a, #7a3a0d);
+  box-shadow: 0 6px 28px rgba(212, 149, 106, 0.35);
+  transform: translateY(-1px);
+}
+
+.contact-map iframe {
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .contact-grid { grid-template-columns: 1fr 1fr; }
+  .contact-map { grid-column: span 2; }
+}
+
+@media (max-width: 680px) {
+  .contact-section { padding: 40px 24px 60px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-map { grid-column: auto; }
+}
+
+@media (max-width: 480px) {
+  .contact-section { padding: 30px 16px 50px; }
+}
